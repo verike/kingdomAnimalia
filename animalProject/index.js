@@ -6,9 +6,14 @@ class Animalia {
         if (this.constructor === Animalia) {
             throw new Error('Animalia cannot be instantiated');
         }
-
     }
+
+    #gender = 'male & female'
     
+    whatGender(){
+        console.log(this.#gender)
+    }
+
     isColdBlooded () {
         console.log('Some animals are cold blooded while some are warm blooded');
     }
@@ -45,7 +50,6 @@ class Invertebrates extends Animalia {
 class Fish extends Vertebrates {
     constructor(){
         super();
-        
     }
 
     isColdBlooded(){
@@ -177,5 +181,24 @@ class Arthropoda extends Invertebrates {
     }
 }
 
+
+// Instantiating the classes
+
 const tillapia = new Fish()
-console.log(tillapia);
+const frog = new Amphibia();
+const lizard = new Reptilia();
+const pigeon = new Aves();
+const human = new Mammals();
+const grasshopper = new Arthropoda();
+
+
+// Storing the in a list, for quick access
+
+const animals = [tillapia, frog, lizard, pigeon, human, grasshopper];
+
+for (anyone of animals) {
+    anyone.whatGender()
+    anyone.feed()
+    anyone.reproduce()
+    anyone.movement()
+}
